@@ -1,0 +1,34 @@
+
+name: CI - Desafio Final DevOps
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Validar e construir projeto
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+
+      - name: Verificar arquivos
+        run: |
+          test -f index.html
+          test -f src/style.css
+          test -f src/script.js
+          test -f Dockerfile
+
+      - name: Construir imagem
+        run: docker build -t desafio-final-devops .
+
+      - name: Finalizar
+        run: echo "Build concluído com sucesso!"

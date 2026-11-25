@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto prático de integração e entrega contínua - DevOps">
+    <title>DevOps Lab | Projeto Final</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">DEV<span>OPS</span> LAB</a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="tag">PROJETO FINAL • DEVOPS</span>
+
+                <h1>Desenvolvimento,<br>
+                    <span>Integração e Entrega.</span>
+                </h1>
+
+                <p>
+                    Um projeto prático para demonstrar o fluxo DevOps,
+                    utilizando controle de versão, integração contínua
+                    e publicação de containers.
+                </p>
+
+                <a href="#tecnologias" class="button">
+                    Conhecer tecnologias
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <div class="terminal-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>terminal — devops</p>
+                </div>
+
+                <div class="terminal-content">
+                    <p><span>$</span> git push origin main</p>
+                    <p class="success">✓ Código enviado</p>
+
+                    <p><span>$</span> podman build</p>
+                    <p class="success">✓ Imagem criada</p>
+
+                    <p><span>$</span> podman push ghcr.io</p>
+                    <p class="success">✓ Publicação concluída</p>
+
+                    <p><span>$</span> deploy --production</p>
+                    <p class="success">✓ Sistema disponível</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies" id="tecnologias">
+            <div class="section-title">
+                <span class="tag">FERRAMENTAS</span>
+                <h2>Tecnologias utilizadas</h2>
+                <p>Ferramentas aplicadas durante o desenvolvimento do projeto.</p>
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon">⌘</div>
+                    <h3>Git e GitHub</h3>
+                    <p>Versionamento de código, branches, commits e Pull Requests.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">⚙</div>
+                    <h3>GitHub Actions</h3>
+                    <p>Automatização de tarefas e validação contínua do projeto.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">▣</div>
+                    <h3>Podman</h3>
+                    <p>Criação e execução de containers para disponibilizar o site.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">⬡</div>
+                    <h3>GHCR</h3>
+                    <p>Armazenamento e distribuição das imagens de containers.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="sobre">
+            <span class="tag">OBJETIVO</span>
+            <h2>Da programação à entrega.</h2>
+            <p>
+                O objetivo deste projeto é demonstrar na prática como
+                organizar o desenvolvimento de software, automatizar
+                verificações e distribuir aplicações utilizando containers.
+            </p>
+
+            <button id="statusButton" class="button">
+                Verificar sistema
+            </button>
+
+            <p id="systemStatus" class="system-status">
+                Sistema aguardando verificação.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>DevOps Lab | Projeto Final</p>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
