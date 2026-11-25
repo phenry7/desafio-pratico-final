@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-      - feature/**
+      - feature/entrega-final
 
   pull_request:
     branches:
@@ -13,12 +13,17 @@ on:
 
 jobs:
   build:
-    name: Validar e construir projeto
+    name: Validar projeto
     runs-on: ubuntu-latest
 
     steps:
       - name: Baixar código
         uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Verificar arquivos
         run: |
